@@ -1,0 +1,212 @@
+{
+  "_comment": "TEMPLATE ONLY. Nothing here is verified ground truth. Copy to evaluation/test_cases.json and replace every REPLACE_* value.",
+  "cases": [
+    {
+      "id": "employee-exact",
+      "category": "exact_employee_lookup",
+      "question": "REPLACE: a question naming an employee exactly",
+      "expected_answer_facts": [
+        "REPLACE_WITH_REAL_FACT"
+      ],
+      "expected_sources": [
+        "REPLACE_WITH_REAL_SOURCE.md"
+      ],
+      "history": [],
+      "is_follow_up": false,
+      "requires_multihop": false,
+      "should_abstain": false,
+      "validated": false,
+      "notes": "PLACEHOLDER - fill in from the real Knowledge Base, then set validated=true"
+    },
+    {
+      "id": "product-info",
+      "category": "product_lookup",
+      "question": "REPLACE: a question about a product",
+      "expected_answer_facts": [
+        "REPLACE_WITH_REAL_FACT"
+      ],
+      "expected_sources": [
+        "REPLACE_WITH_REAL_SOURCE.md"
+      ],
+      "history": [],
+      "is_follow_up": false,
+      "requires_multihop": false,
+      "should_abstain": false,
+      "validated": false,
+      "notes": "PLACEHOLDER - fill in from the real Knowledge Base, then set validated=true"
+    },
+    {
+      "id": "company-info",
+      "category": "company_lookup",
+      "question": "REPLACE: a question about the company",
+      "expected_answer_facts": [
+        "REPLACE_WITH_REAL_FACT"
+      ],
+      "expected_sources": [
+        "REPLACE_WITH_REAL_SOURCE.md"
+      ],
+      "history": [],
+      "is_follow_up": false,
+      "requires_multihop": false,
+      "should_abstain": false,
+      "validated": false,
+      "notes": "PLACEHOLDER - fill in from the real Knowledge Base, then set validated=true"
+    },
+    {
+      "id": "contract-info",
+      "category": "contract_lookup",
+      "question": "REPLACE: a question about a contract",
+      "expected_answer_facts": [
+        "REPLACE_WITH_REAL_FACT"
+      ],
+      "expected_sources": [
+        "REPLACE_WITH_REAL_SOURCE.md"
+      ],
+      "history": [],
+      "is_follow_up": false,
+      "requires_multihop": false,
+      "should_abstain": false,
+      "validated": false,
+      "notes": "PLACEHOLDER - fill in from the real Knowledge Base, then set validated=true"
+    },
+    {
+      "id": "acronym-typo",
+      "category": "acronym_typo",
+      "question": "Who won the IIOYT award?",
+      "expected_answer_facts": [
+        "REPLACE_WITH_REAL_FACT"
+      ],
+      "expected_sources": [
+        "REPLACE_WITH_REAL_SOURCE.md"
+      ],
+      "history": [],
+      "is_follow_up": false,
+      "requires_multihop": false,
+      "should_abstain": false,
+      "validated": false,
+      "notes": "Known failure case: the Knowledge Base spelling may be IIOTY. Confirm the real winner and source, then set validated=true. Expect the answer to mention the spelling difference."
+    },
+    {
+      "id": "university",
+      "category": "university_lookup",
+      "question": "Who wanted to attend or attended Manchester University?",
+      "expected_answer_facts": [
+        "REPLACE_WITH_REAL_FACT"
+      ],
+      "expected_sources": [
+        "REPLACE_WITH_REAL_SOURCE.md"
+      ],
+      "history": [],
+      "is_follow_up": false,
+      "requires_multihop": false,
+      "should_abstain": false,
+      "validated": false,
+      "notes": "Known failure case. Check the real Knowledge Base: if nobody matches, set should_abstain=true and expected_sources=[]; otherwise fill in the real source."
+    },
+    {
+      "id": "followup-pronoun",
+      "category": "follow_up_pronoun",
+      "question": "REPLACE: pronoun follow-up, e.g. 'What is her role?'",
+      "expected_answer_facts": [
+        "REPLACE_WITH_REAL_FACT"
+      ],
+      "expected_sources": [
+        "REPLACE_WITH_REAL_SOURCE.md"
+      ],
+      "history": [
+        "REPLACE: earlier question naming the person"
+      ],
+      "is_follow_up": true,
+      "requires_multihop": false,
+      "should_abstain": false,
+      "validated": false,
+      "notes": "PLACEHOLDER - fill in from the real Knowledge Base, then set validated=true"
+    },
+    {
+      "id": "followup-entity",
+      "category": "follow_up_entity",
+      "question": "REPLACE: follow-up referring to a prior entity, e.g. 'What about the company before that?'",
+      "expected_answer_facts": [
+        "REPLACE_WITH_REAL_FACT"
+      ],
+      "expected_sources": [
+        "REPLACE_WITH_REAL_SOURCE.md"
+      ],
+      "history": [
+        "REPLACE: earlier question"
+      ],
+      "is_follow_up": true,
+      "requires_multihop": false,
+      "should_abstain": false,
+      "validated": false,
+      "notes": "PLACEHOLDER - fill in from the real Knowledge Base, then set validated=true"
+    },
+    {
+      "id": "topic-shift",
+      "category": "topic_shift",
+      "question": "REPLACE: unrelated new question",
+      "expected_answer_facts": [
+        "REPLACE_WITH_REAL_FACT"
+      ],
+      "expected_sources": [
+        "REPLACE_WITH_REAL_SOURCE.md"
+      ],
+      "history": [
+        "REPLACE: earlier question on a different topic"
+      ],
+      "is_follow_up": false,
+      "requires_multihop": false,
+      "should_abstain": false,
+      "validated": false,
+      "notes": "Retrieval must not be contaminated by the earlier topic."
+    },
+    {
+      "id": "multi-hop",
+      "category": "multi_hop",
+      "question": "REPLACE: question needing two or more documents",
+      "expected_answer_facts": [
+        "REPLACE_WITH_REAL_FACT"
+      ],
+      "expected_sources": [
+        "REPLACE_WITH_REAL_SOURCE.md",
+        "REPLACE_WITH_SECOND_SOURCE.md"
+      ],
+      "history": [],
+      "is_follow_up": false,
+      "requires_multihop": true,
+      "should_abstain": false,
+      "validated": false,
+      "notes": "PLACEHOLDER - fill in from the real Knowledge Base, then set validated=true"
+    },
+    {
+      "id": "missing-info",
+      "category": "abstention",
+      "question": "REPLACE: a question the Knowledge Base cannot answer",
+      "expected_answer_facts": [],
+      "expected_sources": [],
+      "history": [],
+      "is_follow_up": false,
+      "requires_multihop": false,
+      "should_abstain": true,
+      "validated": false,
+      "notes": "PLACEHOLDER - fill in from the real Knowledge Base, then set validated=true"
+    },
+    {
+      "id": "ambiguous",
+      "category": "ambiguous",
+      "question": "REPLACE: an ambiguous question (e.g. a first name shared by several people)",
+      "expected_answer_facts": [
+        "REPLACE_WITH_REAL_FACT"
+      ],
+      "expected_sources": [
+        "REPLACE_WITH_REAL_SOURCE.md"
+      ],
+      "history": [],
+      "is_follow_up": false,
+      "requires_multihop": false,
+      "should_abstain": false,
+      "validated": false,
+      "notes": "Expected behaviour: the answer states the ambiguity instead of guessing."
+    }
+  ]
+}

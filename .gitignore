@@ -1,0 +1,78 @@
+# =========================
+# Environment & secrets
+# =========================
+.env
+.env.*
+!.env.example
+
+# =========================
+# Python environments
+# =========================
+.venv/
+venv/
+env/
+
+# =========================
+# Python cache
+# =========================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# =========================
+# Testing & tooling
+# =========================
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# =========================
+# IDE / Editor
+# =========================
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# =========================
+# Logs & temporary files
+# =========================
+*.log
+*.tmp
+*.temp
+
+# =========================
+# Generated / private data
+# =========================
+
+# Local ChromaDB / vector database
+vector_db/*
+!vector_db/.gitkeep
+
+# Local application cache
+cache/*
+!cache/.gitkeep
+
+# External / private Knowledge Base
+knowledge-base/*
+!knowledge-base/.gitkeep
+
+# Generated evaluation output
+evaluation/results*.json
+
+# =========================
+# Build artifacts
+# =========================
+dist/
+build/
+*.egg-info/
+
+# =========================
+# OS files
+# =========================
+.DS_Store
+Thumbs.db
+desktop.ini
